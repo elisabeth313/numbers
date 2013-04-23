@@ -1,0 +1,29 @@
+#Elisabeth Fernandez
+
+def isDivisible(numerator, denominator):
+    if numerator % denominator == 0:
+        return True
+
+def isPrime(number):
+    count = 0
+    for i in range(2,number):
+        if isDivisible(number,i):
+            count = count + 1
+    if count == 0:
+        return True
+    elif count != 0:
+        return False
+            
+        
+            
+        
+
+def main():
+    userNumber = eval(input("Enter a positive integer: "))
+    print("The primes between 1 and",userNumber,"are:")
+    for i in range(2,userNumber):
+        if isPrime(i):
+            print(i)
+        
+
+main()
